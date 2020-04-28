@@ -1,0 +1,28 @@
+<!--Bibliography Style--!>
+
+<?xml version="1.0" ?> 
+
+<!--List of the external resources that we are referencing-->
+ 
+<xsl:stylesheet version="1.0" xmlns:xsl="https://www.w3.org/1999/XSL/Transform" xmlns:b="https://schemas.openxmlformats.org/officeDocument/2006/bibliography">
+ 
+<!--When the bibliography or citation is in your document, it's just HTML-->
+ 
+<xsl:output method="html" encoding="us-ascii"/>
+   
+<!--Match the root element, and dispatch to its children-->
+   
+<xsl:template match="/">
+
+<xsl:apply-templates select="*" />
+
+</xsl:template>
+
+<!--Defines the name of the style in the References dropdown list-->
+<xsl:when test="b:StyleNameLocalized"> 
+   <xsl:choose> 
+      <xsl:when test="b:StyleNameLocalized/b:Lcid='1033'"> 
+         <xsl:text>Simple Book Style</xsl:text> 
+      </xsl:when> 
+</xsl:when>
+
