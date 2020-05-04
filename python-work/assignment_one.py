@@ -6,7 +6,9 @@ Task- variables and types
 # TODO: equal to your age as an integer. Print a statement with an output of
 # TODO: `My name is _____ and I am ______ years old.` First, try doing this using
 # TODO: "+" to combine your variables and the strings, then print the result.
-
+name = "Anastasia"
+age = 23
+print ("My name is", Anastasia, "and I am", age, "years old") 
 # Lesson Learned:
 # This should throw you a fun error, because concatenation can only be done with
 # strings, not strings and integers/floats. Commas, however, simply print 
